@@ -1,21 +1,24 @@
-import "./App.css";
+// import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Profile from "./pages/Profile";
+import HomePage from "./pages/HomePage";
+import CategoriesPage from "./pages/CategoriesPage";
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+    return (
+        <>
+            <Router>
+                <div className="App">
+                    <Navbar />
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/home" element={<HomePage />} />
+                        <Route path="/categories" element={<CategoriesPage />} />
+                    </Routes>
+                </div>
+            </Router>
+        </>
+    );
 }
 
 export default App;
