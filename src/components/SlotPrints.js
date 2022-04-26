@@ -12,6 +12,7 @@ export default function SlotPrints() {
         <>
             <div className="slot-prints">
 
+
                 <div className="slot-print-box">
                     <div className="print-details">
                         {/* <div className="print-date"><h3>Mandag</h3><p>02.05.22</p></div> */}
@@ -31,6 +32,7 @@ export default function SlotPrints() {
                     </div>
                 </div>
 
+
                 <div className="slot-print-box">
                     <div className="print-details">
                         <div>
@@ -48,6 +50,7 @@ export default function SlotPrints() {
                         <img src="https://picsum.photos/300/250" alt="mock"/>
                     </div>
                 </div>
+
 
                 <div className="slot-print-box">
                     <div className="print-details">
@@ -67,8 +70,25 @@ export default function SlotPrints() {
                     </div>
                 </div>
 
-            </div>
+                <div className="slot-print-box">
+                    <div className="print-details">
+                        <div>
+                            <h2>Print mock</h2>
+                            <span>Vejnavn 12, Bynavn 3456</span>
+                            <p>Nulla feugiat mattis ante. 
+                                Nulla interdum nibh sit amet sapien efficitur.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/">website.dk</a>
+                        </div>
+                    </div>
+                    <div className="print-img">
+                        <img src="https://picsum.photos/260/300" alt="mock"/>
+                    </div>
+                </div>
 
+            </div>
         </>
     );
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
+import CategoryElements from '../components/CategoryElements';
+
 
 export default function CategoriesPage() {
     const [categories, setCategories] = useState([]);
@@ -14,11 +16,25 @@ export default function CategoriesPage() {
 
         getData();
     }, []);
+
+    // function search(value) {
+    //     value = value.toLowerCase();
+    //     let filteredElements = [];
+    //     for (let element of elements) {
+    //       let Name = element.Name.toLowerCase();
+    //       if (Name.includes(value)) {
+    //         filteredElements.push(element);
+    //       }
+    //     }
+    //     appendElements(filteredElements);
+    //   }
+
+    
     return (
         <>
             <div className='page'>
                 <h1>Categories</h1>
-                <section className="grid-container">          
+                <section className="category-cntr">          
                     {categories.map(category => ( 
                         <article className="category-article">
                             <img src={category.ImageUrl} alt={category.Name} />
@@ -26,6 +42,9 @@ export default function CategoriesPage() {
                         </article>
                     ))}
                 </section>
+
+               <CategoryElements />
+
             </div>
         </>
     )

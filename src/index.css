@@ -145,7 +145,7 @@ a {
     }
 }
 
-.grid-container > .category-article {
+.grid-container > article {
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
     text-align: center;
     margin: 5px 0px;
@@ -156,15 +156,13 @@ a {
     cursor: pointer;
 }
 
-.grid-container > .category-article:hover {
-    box-shadow: 0 8px 16px 0 var(--green);
-}
 
-.grid-container > .category-article img {
+.grid-container > article img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
+
 
 /* ---------- FORM ---------- */
 form {
@@ -240,6 +238,121 @@ form .file-input {
     display: none;
 }
 
+
+/* ---------- CATEGORIES ---------- */
+.category-cntr {
+    margin: 0px 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+@media (min-width: 600px) {
+    .category-cntr {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .category-cntr {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.category-cntr > .category-article {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin: 5px 0px;
+    padding: 0;
+    background-color: var(--white);
+}
+
+.category-cntr> .category-article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* ----- Category elements ----- */
+.category-flex-cntr {
+    max-width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.category-elem-box {
+    /* width: 48%; */
+    height: 100%;
+    margin-bottom: 2%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+    .category-elem-box {
+        width: 32%;
+    }
+}
+
+@media (min-width: 992px) {
+    .category-elem-box {
+        width: 24%;
+    }
+}
+
+.category-img {
+    width: 100%;
+    height: 110px;
+    top: 0;
+    left: 0;
+    background-color: var(--light-green);
+    background-image: url("https://cdn3.iconfinder.com/data/icons/design-n-code/100/272127c4-8d19-4bd3-bd22-2b75ce94ccb4-512.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.category-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-details {
+    border: solid blue 0px;
+    height: auto;
+    width: auto;
+    color: #000;
+    font-size: 1em;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.category-details h2 {
+    margin: 0px 5px;
+}
+
+.category-details p {
+    padding: 0px 5px;
+    max-width: 100%;
+}
+
+/* div.category-details > p:last-child {
+    margin: 0px 5px;
+    max-width: 100%;
+} */
+
+
+
 /* ---------- SLOT MACHINE ---------- */
 .slot-section {
     width: 100%;
@@ -256,7 +369,7 @@ form .file-input {
 .slot-machine-cntr {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-    gap: 2px;
+    gap: .2em;
 }
 
 @media (min-width: 600px) {
@@ -290,7 +403,7 @@ form .file-input {
     width: auto;
     height: 240px;
     margin: 5px 0px;
-    padding: 10px 0px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -319,6 +432,11 @@ form .file-input {
 .slot-details {
     color: #000;
     font-size: 1em;
+}
+
+.slot-details span {
+    font-weight: 600;
+    font-size: 1.2em;
 }
 
 .slot-btn {
@@ -366,7 +484,7 @@ form .file-input {
     flex-direction: row;
     justify-content: space-between;
     background-color: var(--light-grey);
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 .print-date {

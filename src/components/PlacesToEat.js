@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 export default function PlacesToEat() {
     const [places, setPlaces] = useState([]);
-    const [onePlace, setOnePlace] = useState(''); //one more hook for storing current random post
   
     useEffect(() => {
         const fetchPlaces = async () => {
@@ -17,27 +16,28 @@ export default function PlacesToEat() {
         };
         fetchPlaces();
     }, []);
-  
-    const handleClick = () => {
-        const random = places[Math.floor(Math.random() * places.length)];
-        setOnePlace(random);
-        console.log(random)
-    };
-    // console.log(places);
+
+    function getImgUrl(place) {
+        if (place.Files.length >= 1) {
+            return place.Files[0].Uri;
+        }
+    }
 
 
     return (
         <>
-            <div className="slot-element">
-                <div className="slot-img">
-                    {/* <img src={onePlace.Files[0].Uri} alt={onePlace.Name} /> */}
+            {places.map(place => ( 
+                <div className="category-element">
+                    <div className="category-img">
+                        <img src={getImgUrl} alt={place.Name} />
+                    </div>
+                    <div className="category-details">
+                        <h2>{place.Name}</h2> 
+                        <p>{place.Category.Name}</p>  
+                        <span>{place.MainCategory.Name}</span>
+                    </div>
                 </div>
-                <div className="slot-details">
-                    <span>{onePlace.Name}</span> 
-                    {/* <p>{onePlace.Category.Name}</p>   */}
-                </div>
-            </div>
-            <button onClick={handleClick} className="slot-btn">Spin</button>
+            ))}
         </>
     );
 }

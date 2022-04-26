@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 export default function Activities() {
     const [activities, setActivities] = useState([]);
-    const [oneActivity, setOneActivity] = useState(''); //one more hook for storing current random post
   
     useEffect(() => {
         const fetchActivities = async () => {
@@ -17,28 +16,28 @@ export default function Activities() {
         };
         fetchActivities();
     }, []);
-  
-    const handleClick = () => {
-        const random = activities[Math.floor(Math.random() * activities.length)];
-        setOneActivity(random);
-        console.log(random)
-    };
-    // console.log(activities);
+
+    function getImgUrl(activity) {
+        if (activity.Files.length >= 1) {
+            return activity.Files[0].Uri;
+        }
+    }
 
 
     return (
         <>
-            <div className="slot-element">  
-                <div className="slot-img">
-                    {/* <img src={oneActivity.Files[0]} alt={oneActivity.Name} /> */}
-                </div>           
-                <div className="slot-details">
-                    <span>{oneActivity.Name}</span>                 
-                    {/* <h3>{oneActivity.MainCategory.Name}</h3> */}
-                    {/* <p>{oneActivity.Category.Name}</p>   */}
+            {activities.map(activity => ( 
+                <div className="category-element">  
+                    <div className="category-img">
+                        <img src={getImgUrl(activity)} alt={activity.Name} />
+                    </div>           
+                    <div className="category-details">
+                        <h2>{activity.Name}</h2>                 
+                        <p>{activity.Category.Name}</p>  
+                        <span>{activity.MainCategory.Name}</span>
+                    </div>
                 </div>
-            </div>
-            <button onClick={handleClick} className="slot-btn">Spin</button>
+            ))}
         </>
     );
 }

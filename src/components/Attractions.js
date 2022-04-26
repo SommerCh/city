@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 export default function Attractions() {
     const [attractions, setAttractions] = useState([]);
-    const [oneAttraction, setOneAttraction] = useState(''); //one more hook for storing current random post
   
     useEffect(() => {
         const fetchAttractions = async () => {
@@ -10,37 +9,35 @@ export default function Attractions() {
             const fetchingAttractions = await fetch("data/attractions.json");
             const attractions = await fetchingAttractions.json();
     
-            setAttractions(attractions);
-            
+            setAttractions(attractions);            
             } catch (error) {
             console.log(error);
             }
         };
         fetchAttractions();
     }, []);
-  
-    const handleClick = () => {
-        const random = attractions[Math.floor(Math.random() * attractions.length)];
-        setOneAttraction(random);
-        console.log(random)
-    };
-    // console.log(attractions);
+
+    function getImgUrl(attraction) {
+        if (attraction.Files.length >= 1) {
+            return attraction.Files[0].Uri;
+        }
+    }
 
 
     return (
         <>
-            <div className="slot-element">
-                <div className="slot-img">
-                    {/* <img src={oneAttraction.Files[0]} alt={oneAttraction.Name} /> */}
+            {attractions.map(attraction => ( 
+                <div className="category-element">
+                    <div className="category-img">
+                        <img src={getImgUrl(attraction)} alt={attraction.Name} />
+                    </div>
+                    <div className="category-details">
+                        <h2>{attraction.Name}</h2>                     
+                        <p>{attraction.Category.Name}</p>  
+                        <span>{attraction.MainCategory.Name}</span>
+                    </div>
                 </div>
-                <div className="slot-details">
-                    <span>{oneAttraction.Name}</span>                     
-                    {/* <p>{oneAttraction.Category.Name}</p>   */}
-                </div>
-            </div>
-            <button onClick={handleClick} className="slot-btn">Spin</button>
+            ))} 
         </>
     );
 }
-
-
