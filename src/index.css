@@ -1,15 +1,43 @@
-
 /* ---------- ROOTS ---------- */
 :root {
-    --green: rgb(38, 76, 89);
-    --light-green: rgb(172, 198, 201);
-    --light-grey: #f1f1f4;
-    --white: #f1f1f1;
-    --text-color-light: #f1f1f1;
-    --text-color-dark: #333;
-    --text-color-danger: rgb(152, 58, 58);
-    --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* ----- Primary Colors ----- */
+    --corp-red: #E70013;
+    --corp-blue: #022B52;
+    --black: #000000;
+    --light-grey: #CED2D3;
+    --dark-grey: #A1A8AD;
+    --white: #ffff;
+
+    /* ----- Secondary Colors ----- */
+    --dark-blue: #00587A;
+    --light-blue: #C3EBFF;
+    --dark-green: #007554;
+    --light-green: #A3EABF;
+    --dark-yellow: #DBA200;
+    --light-yellow: #FFE882;
+    --burgundy: #9A0035;
+    --pink: #FAC5CC;
+
+    --text-color-light: #ffffff;
+    --text-color-dark: #022B52;
+    --font-family: 'VistDenmark', 'Montserrat', Verdana, Arial, sans-serif;
 }
+
+/* ---------- FONTS ---------- */
+@font-face {
+    font-family: 'VisitDenmark';
+    font-weight: 400;
+    src: url("assets/fonts/VisitDenmark-Regular.otf") local("VisitDenmark-Regular") format("opentype"),
+         url("assets/fonts/VisitDenmark-Medium.otf") local("VisitDenmark-Medium") format("opentype"),
+         url("assets/fonts/VisitDenmark-SemiBold.otf") local("VisitDenmark-SemiBold") format("opentype"),
+         url("assets/fonts/VisitDenmark-Bold.otf") local("VisitDenmark-Bold") format("opentype")
+         url("assets/fonts/VisitDenmark-ExtraBold.otf") local("VisitDenmark-ExtraBold") format("opentype"),
+         url("assets/fonts/VisitDenmark-Outline-Regular.otf") local("VisitDenmark-Outline-Regular") format("opentype"),
+         url("assets/fonts/VisitDenmark-Outline-Medium.otf") local("VisitDenmark-Outline-Medium") format("opentype");;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 
 /* ---------- GEERAL ---------- */
 body {
@@ -17,9 +45,9 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: var(--light-green);
-    color: var(--text-color-dark);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background-color: var(--white);
+    color: var(--corp-blue);
+    font-family: 'VistDenmark', 'Montserrat', Verdana, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -30,6 +58,7 @@ code {
 
 main {
     padding: 58px 20px;
+    font-family: Montserrat, Verdana, Arial, sans-serif;
 }
 
 h1 {
@@ -64,6 +93,7 @@ a {
 .text-center {
     text-align: center;
 }
+
 .text-error {
     color: var(--text-color-danger);
 }
@@ -97,17 +127,19 @@ a {
 
 /* ---------- NAV ---------- */
 .navbar {
-    background-color: var(--green);
+    background-color: var(--corp-blue);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     text-align: center;
+    z-index: 110;
+
 }
 
 .navbar a {
     display: inline-block;
-    color: var(--text-color-light);
+    color: var(--white);
     text-align: center;
     padding: 20px 16px;
     text-decoration: none;
@@ -116,13 +148,13 @@ a {
 }
 
 .navbar a:hover {
-    background-color: var( --light-grey);
-    color: var(--text-color-dark);
+    background-color: var(--light-blue);
+    color: var(--corp-blue);
 }
 
 .navbar a.active {
-    background-color: var(--light-green);
-    color: var(--green);
+    background-color: var(--light-blue);
+    color: var(--corp-blue);
 }
 
 
@@ -145,7 +177,7 @@ a {
     }
 }
 
-.grid-container > article {
+.grid-container>article {
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
     text-align: center;
     margin: 5px 0px;
@@ -157,7 +189,7 @@ a {
 }
 
 
-.grid-container > article img {
+.grid-container>article img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -187,8 +219,8 @@ button {
     text-align: center;
     cursor: pointer;
     border: none;
-    color: var(--text-color-light);
-    background-color: var(--green);
+    color: var(--white);
+    background-color: var(--corp-red);
     letter-spacing: 0.05em;
     text-transform: uppercase;
     padding: 0.5em 1em;
@@ -198,9 +230,9 @@ button {
 }
 
 button.btn-outline {
-    background-color: var(--light-green);
-    color: var(--green);
-    border: solid 2px var(--green);
+    background-color: var(--white);
+    color: var(--corp-red);
+    border: solid 2px var(--corp-red);
 }
 
 .btn-sign-out {
@@ -220,7 +252,7 @@ input {
     box-sizing: border-box;
     display: block;
     background: var(--white);
-    border: solid 2px var(--green);
+    border: solid 2px var(--dark-yellow);
 }
 
 .image-preview {
@@ -258,7 +290,8 @@ form .file-input {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
-.category-cntr > .category-article {
+
+.category-cntr>.category-article {
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
     margin: 5px 0px;
@@ -266,7 +299,7 @@ form .file-input {
     background-color: var(--white);
 }
 
-.category-cntr> .category-article img {
+.category-cntr>.category-article img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -286,7 +319,7 @@ form .file-input {
 }
 
 .category-elem-box {
-    /* width: 48%; */
+    width: 48%;
     height: 100%;
     margin-bottom: 2%;
     padding: 0px;
@@ -299,22 +332,23 @@ form .file-input {
 
 @media (min-width: 600px) {
     .category-elem-box {
-        width: 32%;
+        width: 48%;
     }
 }
 
 @media (min-width: 992px) {
     .category-elem-box {
-        width: 24%;
+        width: 32%;
     }
 }
 
 .category-img {
     width: 100%;
-    height: 110px;
+    height: 120px;
     top: 0;
     left: 0;
-    background-color: var(--light-green);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.12);
     background-image: url("https://cdn3.iconfinder.com/data/icons/design-n-code/100/272127c4-8d19-4bd3-bd22-2b75ce94ccb4-512.png");
     background-position: center center;
     background-size: contain;
@@ -327,30 +361,80 @@ form .file-input {
     object-fit: cover;
 }
 
+.category-title-box {
+    height: 90%;
+    width: 90%;
+    margin: 0px auto;
+    padding: 0px 5px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border: solid var(--white) 2px;
+}
+
+.category-title {
+    height: auto;
+    width: 90%;
+    margin: 0px auto;
+    padding: 5px 0px;
+    position: absolute;
+    z-index: 100;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0) 60%);
+}
+
+.category-title h2 {
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+    line-height: 1;
+    text-align: left;
+    word-wrap: break-word;
+}
+
 .category-details {
     border: solid blue 0px;
     height: auto;
     width: auto;
+    padding: 5px;
     color: #000;
     font-size: 1em;
     text-align: left;
     word-wrap: break-word;
 }
 
-.category-details h2 {
-    margin: 0px 5px;
-}
-
 .category-details p {
-    padding: 0px 5px;
-    max-width: 100%;
+    margin: 0px;
 }
 
-/* div.category-details > p:last-child {
-    margin: 0px 5px;
-    max-width: 100%;
-} */
+.readmore-btn {
+    height: 14px;
+    width: 100px;
+    margin-top: 10px;
+    padding: 10px 5px;
+    background-color: red;
+    font-size: 10px;
+    font-weight: 600;
 
+}
+
+.readmore-btn a {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+.readmore-btn svg {
+    width: 14px;
+    height: 14px;
+    bottom: 0;
+}
 
 
 /* ---------- SLOT MACHINE ---------- */
@@ -369,11 +453,11 @@ form .file-input {
 .slot-machine-cntr {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-    gap: .2em;
+    gap: 2px;
 }
 
 @media (min-width: 600px) {
-    .slot-machine-cntr{
+    .slot-machine-cntr {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     }
 }
@@ -390,24 +474,23 @@ form .file-input {
 
 .slot-wheel {
     margin: 5px 0px;
-    padding: 10px 2px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;    
+    justify-content: space-between;
     background-color: var(--light-grey);
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
 }
 
 .slot-element {
     width: auto;
     height: 240px;
-    margin: 5px 0px;
+    margin: 4px;
     padding: 0px;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    background-color: transparent;
+    border: solid var(--dark-green) 2px;
     text-align: center;
 }
 
@@ -416,7 +499,7 @@ form .file-input {
     height: 120px;
     top: 0;
     left: 0;
-    background-color: var(--light-green);
+    background-color: var(--dark-grey);
     background-image: url("https://cdn3.iconfinder.com/data/icons/design-n-code/100/272127c4-8d19-4bd3-bd22-2b75ce94ccb4-512.png");
     background-position: center center;
     background-size: contain;
@@ -430,13 +513,15 @@ form .file-input {
 }
 
 .slot-details {
-    color: #000;
-    font-size: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 .slot-details span {
-    font-weight: 600;
-    font-size: 1.2em;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    word-wrap: wrap;
 }
 
 .slot-btn {
@@ -448,11 +533,11 @@ form .file-input {
     cursor: pointer;
     border: none;
     border-radius: 50%;
-    background-color: var(--green);
-    color: var(--text-color-light);
+    background-color: var(--dark-green);
+    color: var(--white);
     font-weight: 600;
     letter-spacing: 1.5px;
-    font-size: 12px;   
+    font-size: 12px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -465,26 +550,26 @@ form .file-input {
 }
 
 @media (min-width: 600px) {
-    .slot-prints{
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    .slot-prints {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     }
 }
 
 @media (min-width: 992px) {
     .slot-prints {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     }
 }
 
 .slot-print-box {
+    height: auto;
     width: 100%;
-    margin: 0px;
-    padding: 10px 0px;
+    margin: 5px 0px;
+    padding: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: var(--light-grey);
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 .print-date {
@@ -504,13 +589,14 @@ form .file-input {
     margin: 0;
     text-align: right;
 }
+
 .print-details {
     height: 100%;
-    width: 55%;
-    padding: 0 5px;
+    width: 48%;
+    margin: 0px 0px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     border: solid blue 0px;
 }
 
@@ -519,83 +605,87 @@ form .file-input {
     text-align: left;
     line-height: 1;
 }
+.print-details span {
+    padding: 5px 0px 0px 0px;
+    font-weight: 600;    
+    font-size: 12px;
+}
 
 .print-details p {
-    margin: 8px 0px;
+    margin: 10px 0px;
     line-height: 1;
+    font-size: 10px;
+}
+
+div.print-img > div > div > div {
+    background-color: var(--light-green);
+    bottom: 0;
+}
+
+div.print-img > div > div > div > a{
+    color: var(--corp-blue);
 }
 
 .print-img {
-    height: 120px;
-    width: 45%;
-    margin-right: 5px;
+    height: 100%;
+    width: 50%;
+    margin-right: 0px;
+    position: relative;
 }
 
 .print-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 10px;
 }
 
-
-/* ---------- LOADER ---------- */
-.loader {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 99999999;
-    overflow: hidden;
-    background: var(--loader-background-color);
-    text-align: center;
-}
-
-.spinner {
-    border: 5px solid var(--light-green);
-    border-radius: 50%;
-    border-top: 5px solid var(--green);
-    width: 50px;
-    height: 50px;
-    -webkit-animation: spin 1s linear infinite;
-    /* Safari */
-    animation: spin 1s linear infinite;
-    display: inline-block;
-    vertical-align: middle;
+.print-title-box {
+    height: 90%;
+    width: 88%;
+    margin: 0px auto;
+    padding: 0px 5px;
+    left: 50%;
+    top: 50%;
     position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border: solid var(--white) 2px;
 }
 
-.hide {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 0.4s, opacity 0.4s linear;
-}
-
-.avatar {
+.print-title {
+    height: 90%;
+    width: 90%;
+    margin: 0px auto;
+    padding: 5px 0px;
+    position: absolute;
+    z-index: 100;
     display: flex;
-    align-items: center;
-    margin: 0 0 1.2em;
+    flex-direction: column;
+    justify-content: space-between;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0) 60%);
     text-align: left;
 }
 
-.avatar span {
-    margin: 0 0 0 1em;
-}
-
-.avatar h3,
-.avatar p {
+.print-title h2 {
     margin: 0;
+    padding: 0;
+    color: var(--white);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+    line-height: 1;
+    text-align: left;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
 }
-
-article .avatar img {
-    max-width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
+.print-title span {
+    margin: 0;
+    padding: 0;
+    color: var(--light-green);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+    line-height: 1;
+    text-align: left;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    font-weight: 600;
 }

@@ -87,12 +87,21 @@ export default function CategoryElements() {
                         <div className="category-elem-box">
                             <div className="category-img">
                                 <img src={getImgUrl(element)} alt={element.Name} />
+                                <div className='category-title-box'>
+                                    <div className='category-title'>
+                                        <h2>{element.Name}</h2>  
+                                    </div>
+                                </div>
                             </div>
+                            
                             <div className="category-details">
-                                <h2>{element.Name}</h2>                     
+                                {/* <h2>{element.Name}</h2>                      */}
                                 <p>{element.MainCategory.Name}</p>  
                                 <p>{element.Category.Name}</p>
                                 {/* <p>{element.Descriptions[0].Text}</p>  */}
+                                <div className='readmore-btn'>
+                                    <a href={element.CanonicalUrl} target="_blank" rel="noreferrer">Read more </a>
+                                </div>
                             </div>
                         </div>
                     ))} 
