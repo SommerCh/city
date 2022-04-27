@@ -13,30 +13,32 @@ export default function SlotPrints() {
             <div className="slot-prints">
 
 
-                <div className="slot-print-box">
+
+            <div className="slot-print-box">
                     <div className="print-img">
-                        <img src="https://files.guidedanmark.org/files/484/19777_Racehall_-_Race.jpg" alt="RaceHall" />
+                        <img src="https://files.guidedanmark.org/files/484/209363_Aarhus-Braetspilscafe-indendoers.jpg" alt="Aarhus Brætspilscafé" />
                             <div className='print-title-box'>
                             <div className='print-title'>                                
-                                <span><h2>RaceHall</h2> Activity</span>  
+                                <span><h2>Aarhus Brætspilscafé</h2> Place To Eat</span>  
+
                                 <div className="readmore-btn">
-                                    <a href="https://www.visitaarhus.com/aarhus/plan-your-trip/release-your-inner-speed-devil-gdk982110" target="_blank" rel="noreferrer">Read more <RiArrowRightSLine/> </a>
-                                </div>                                 
+                                    <a href="https://aarhusbraetspilscafe.dk/en" target="_blank" rel="noreferrer">Read more <RiArrowRightSLine/> </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="print-details">
-                        {/* <div className="print-date"><h3>Mandag</h3><p>02.05.22</p></div> */}
-
-                        {/* Activities.json -> l.2071 */}
-                        <span>Hasselager Centervej 30, Viby J 8260</span>
-                        <span>Release your inner speed devil </span>
-                        <p>RaceHall is the place for you, <br/>
-                            if you love the smell of petrol – and have some of it running in your veins. <br/> 
-                            Racehall is Europe's largest go-cart centre where you can compete against your pals to see who gets the right to gloat! <br/>
-                            If you have always believed that you are the best driver among all your friends, this is the perfect 
-                            opportunity to prove it.<br/><br/>
-                            You can drive the fast go-carts, and afterwards enjoy real American food at the RaceHall diner.
+                        {/* PlacesToEat.js -> l. 781 */}
+                        <span>Fredensgade 38, Aarhus C 8000</span>
+                        <span>A world of fun </span>
+                        <p>    A modest admission fee gives you access to a wealth of games, 
+                            and a world of fun, where everyone can join in. <br/><br/>
+                            If you feel like a bite to eat or something to drink while playing, small delicious dishes, coffee and cakes 
+                            are available for purchase. <br/> 
+                            You may also bring your own board games, 
+                            and even your own food. <br/><br/>
+                            Please note, however, that the admission fee also applies whether you play using the café’s or your own games, 
+                            and that you may not bring your own drinks or snacks
                         </p>
                     </div>
                 </div>
@@ -73,30 +75,28 @@ export default function SlotPrints() {
 
                 <div className="slot-print-box">
                     <div className="print-img">
-                        <img src="https://files.guidedanmark.org/files/484/209363_Aarhus-Braetspilscafe-indendoers.jpg" alt="Aarhus Brætspilscafé" />
+                        <img src="https://files.guidedanmark.org/files/484/19777_Racehall_-_Race.jpg" alt="RaceHall" />
                             <div className='print-title-box'>
                             <div className='print-title'>                                
-                                <span><h2>Aarhus Brætspilscafé</h2> Place To Eat</span>  
-
+                                <span><h2>RaceHall</h2> Activity</span>  
                                 <div className="readmore-btn">
-                                    <a href="https://aarhusbraetspilscafe.dk/en" target="_blank" rel="noreferrer">Read more <RiArrowRightSLine/> </a>
-                                </div>
-
+                                    <a href="https://www.visitaarhus.com/aarhus/plan-your-trip/release-your-inner-speed-devil-gdk982110" target="_blank" rel="noreferrer">Read more <RiArrowRightSLine/> </a>
+                                </div>                                 
                             </div>
                         </div>
                     </div>
                     <div className="print-details">
-                        {/* PlacesToEat.js -> l. 781 */}
-                        <span>Fredensgade 38, Aarhus C 8000</span>
-                        <span>A world of fun </span>
-                        <p>    A modest admission fee gives you access to a wealth of games, 
-                            and a world of fun, where everyone can join in. <br/><br/>
-                            If you feel like a bite to eat or something to drink while playing, small delicious dishes, coffee and cakes 
-                            are available for purchase. <br/> 
-                            You may also bring your own board games, 
-                            and even your own food. <br/><br/>
-                            Please note, however, that the admission fee also applies whether you play using the café’s or your own games, 
-                            and that you may not bring your own drinks or snacks
+                        {/* <div className="print-date"><h3>Mandag</h3><p>02.05.22</p></div> */}
+
+                        {/* Activities.json -> l.2071 */}
+                        <span>Hasselager Centervej 30, Viby J 8260</span>
+                        <span>Release your inner speed devil </span>
+                        <p>RaceHall is the place for you, <br/>
+                            if you love the smell of petrol – and have some of it running in your veins. <br/> 
+                            Racehall is Europe's largest go-cart centre where you can compete against your pals to see who gets the right to gloat! <br/>
+                            If you have always believed that you are the best driver among all your friends, this is the perfect 
+                            opportunity to prove it.<br/><br/>
+                            You can drive the fast go-carts, and afterwards enjoy real American food at the RaceHall diner.
                         </p>
                     </div>
                 </div>

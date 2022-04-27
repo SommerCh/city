@@ -18,7 +18,7 @@ export default function HomePage() {
                 <section className="slot-section">
                     <div>
                         <h2>Slot Machine</h2>
-                        <SlotMachineComp />
+                            <SlotMachineComp />                        
                     </div>
                 </section>
 

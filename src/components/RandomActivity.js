@@ -9,48 +9,43 @@ export default function RandomActivity() {
 
     // Fetch Activities
         useEffect(() => {
-            const fetchActivities = async () => {
-                try {
-                const fetchingActivities = await fetch("data/activities.json");
-                const activities = await fetchingActivities.json();
-
-                setActivities(activities);
-                } catch (err) {
-                console.log(err);
-                }
-            };
-            fetchActivities();
-        }, []);
-  
+            async function getData() {
+                const response = await fetch("/data/activities.json");
+                const data = await response.json();
+                setActivities(data);
+                console.log(data);
+            }
+            getData();
+        }, [])
     
-            const handleSpinActivities = () => {
-                let random = activities[Math.floor(Math.random() * activities.length)];
-                setOneActivity(random);
-                console.log(random)
-            };
+    // Place random from fetch    
+        const handleSpinActivities = () => {
+            let random = activities[Math.floor(Math.random() * activities.length)];
+            setOneActivity(random);
+            console.log(random)
+        };
 
             
-            // Fetch imgs
-                function getImgAct(oneActivity) {
-                    if (oneActivity.Files.length >= 1) {
-                        return oneActivity.Files[0].Uri;
-                    }
-                    
-                }
+    // Fetch imgs
+        function getImgAct(oneActivity) {
+            if (oneActivity.Files?.length >= 1) {
+                return oneActivity.Files[0]?.Uri;
+            }
+        }
 
     
+
     return (
         <>                
             <div className='slot-wheel'>                        
                 <div className="slot-element">  
                     <div className="slot-img">
-                        {/* <img src={getImgAct(oneActivity)} alt={oneActivity.Name} />  */}
+                    <img src={oneActivity.Files?.lenght ? oneActivity?.Files[0]?.Uri : getImgAct(oneActivity)} alt={oneActivity.Name} /> 
                     </div>           
                     <div className="slot-details">
-                        <h2>{oneActivity.Name}</h2>                 
-                        {/* <p>{oneActivity.MainCategory.Name}</p>   
-                        <p>{oneActivity.Category.Name}</p>  */}
-                        {/* <p className='category-desc'>{oneActivity.Descriptions[0].Text}</p>  */}           
+                        <div className="slot-title"> <h2>{oneActivity?.Name}</h2> </div>                                        
+                        <div className="slot-cat"> <p>{oneActivity.Category?.Name}</p> </div>
+                        {/* <div className="slot-desc"> <p>{oneActivity.Descriptions[0].Text}</p> </div>         */}
                     </div>
                 </div> 
                 <button onClick={handleSpinActivities} className="slot-btn">Spin</button>                
