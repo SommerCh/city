@@ -1,44 +1,66 @@
-import { useState, useEffect } from "react";
+import {  useState } from "react";
+import AllPlaces from "./AllPlaces";
+import Cafes from "./Cafes";
+import Clubs from "./Clubs";
+import Restaurants from "./Restaurants";
 
 export default function PlacesToEat() {
-    const [places, setPlaces] = useState([]);
-  
-    useEffect(() => {
-        const fetchPlaces = async () => {
-            try {
-            const fetchingPlaces = await fetch("data/placesToEat.json");
-            const places = await fetchingPlaces.json();
-    
-            setPlaces(places);
-            } catch (err) {
-            console.log(err);
-            }
-        };
-        fetchPlaces();
-    }, []);
+  const [change, setChange] = useState();
 
-    function getImgUrl(place) {
-        if (place.Files.length >= 1) {
-            return place.Files[0].Uri;
-        }
+  function test(e) {
+    setChange(e.target.value);
+
+    const cafe = document.querySelector("#cafe");
+    const club = document.querySelector("#club");
+    const res = document.querySelector("#res");
+    const all = document.querySelector("#all");
+
+    if (e.target.value === "Cafés") {
+      club.classList.remove("yes");
+      res.classList.remove("yes");
+      cafe.classList.add("yes");
+      all.classList.add("no");
+    } else if (e.target.value === "Nightlife and Club") {
+      cafe.classList.remove("yes");
+      res.classList.remove("yes");
+      club.classList.add("yes");
+      all.classList.add("no");
+    } else if (e.target.value === "Restaurants") {
+      club.classList.remove("yes");
+      cafe.classList.remove("yes");
+      res.classList.add("yes");
+      all.classList.add("no");
+    } else if (e.target.value === "All") {
+      all.classList.remove("no");
     }
+  }
 
+  return (
+    <section className="page">
+      <h1>Places To Eat</h1>
 
-    return (
-        <>
-            {places.map(place => ( 
-                <div className="category-element">
-                    <div className="category-img">
-                        <img src={getImgUrl} alt={place.Name} />
-                    </div>
-                    <div className="category-details">
-                        <h2>{place.Name}</h2> 
-                        <p>{place.Category.Name}</p>  
-                        <span>{place.MainCategory.Name}</span>
-                    </div>
-                </div>
-            ))}
-        </>
-    );
+      <select value={change} onChange={test}>
+        <option value="All">All</option>
+        <option value="Cafés">Cafés</option>
+        <option value="Nightlife and Club">Nightlife and Club</option>
+        <option value="Restaurants">Restaurants</option>
+      </select>
+
+      <div id="all">
+        <AllPlaces />
+      </div>
+
+      <div className="container">
+        <div id="cafe" className="no">
+          <Cafes />
+        </div>
+        <div id="club" className="no">
+          <Clubs />
+        </div>
+        <div id="res" className="no">
+          <Restaurants />
+        </div>
+      </div>
+    </section>
+  );
 }
-
