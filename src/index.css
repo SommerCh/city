@@ -780,3 +780,7 @@ div.print-img > div > div > div > a{
     text-transform: uppercase;
     font-weight: 600;
 }
+
+.no{display: none;}
+
+.yes{display: inline;}
