@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
+// import { IoLockClosed } from "react-icons/io5";
 
 
 export default function RandomEvent() {
@@ -33,6 +34,14 @@ export default function RandomEvent() {
             }
         }
 
+    // Save to local storage
+        // function saveToLocal() {
+        // window.localStorage.setItem("oneEvent", JSON.stringify(oneEvent));
+
+        // let thisEvent = window.localStorage.getItem("oneEvent");
+        // console.log(JSON.parse(thisEvent));
+        // }
+
     
 
     return (
@@ -48,7 +57,10 @@ export default function RandomEvent() {
                         {/* <div className="slot-desc"> <p>{oneEvent.Descriptions[0].Text}</p> </div>  */}
                     </div>
                 </div> 
-                <button onClick={handleSpinEvents} className="slot-btn">Spin</button>                
+                <div className='btn-cntr'>
+                    <button onClick={handleSpinEvents} className="slot-btn">Spin</button>
+                </div>
+                {/* <button onClick={saveToLocal} className="save-btn"> <IoLockClosed />Save </button>               */}
             </div>
         </>
     )

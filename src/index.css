@@ -24,7 +24,7 @@
     --font-family: "VistDenmark", "Montserrat", Verdana, Arial, sans-serif;
 
     /* ----- Img Filters ----- */
-    --filter-brightness: brightness(75%);
+    --filter-brightness: brightness(85%);
     --filter-contrast: contrast(85%);
     --filter-blur: blur(0.5px);
 }
@@ -559,7 +559,7 @@ form .file-input {
     color: var(--white);
     position: absolute;
     text-align: left;
-    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 60%);
+    /* background: radial-gradient(ellipse, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 60%); */
     text-shadow: 0 0 8px rgba(0, 0, 0, 1);
 }
 
@@ -612,12 +612,20 @@ form .file-input {
     text-align: left;
 }
 
+.btn-cntr {
+    width: 100%;
+    height: 100%;
+    margin-top: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
 .slot-btn {
     width: 44px;
     height: 44px;
-    margin: 10px auto 0;
     padding: 5px;
-    display: block;
+    left: 10px;
     cursor: pointer;
     border: none;
     border-radius: 50%;
@@ -629,6 +637,33 @@ form .file-input {
     text-align: center;
     text-transform: uppercase;
 }
+
+.save-btn {
+    width: auto;
+    height: auto;
+    padding: 0px 2px;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--white);
+    /* display: flex;
+    flex-direction: column; 
+    justify-content: center;*/
+    font-size: 10px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.save-btn svg {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    fill: var(--white);
+}
+
 
 /* ----- Slot Prints ----- */
 .slot-prints {

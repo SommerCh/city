@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
+// import { IoLockClosed } from "react-icons/io5";
 
 
 export default function RandomPlaceToEat() {
@@ -33,7 +34,14 @@ export default function RandomPlaceToEat() {
             }
         }
 
-    
+    // Save to local storage
+        // function saveToLocal() {
+        // window.localStorage.setItem("onePlace", JSON.stringify(onePlace));
+
+        // let thisPlace = window.localStorage.getItem("onePlace");
+        // console.log(JSON.parse(thisPlace));
+        // }
+
 
     return (
         <>                
@@ -48,9 +56,13 @@ export default function RandomPlaceToEat() {
                         {/* <div className="slot-desc"> <p>{onePlace.Descriptions[0]?.Text}</p> </div>            */}
                     </div>
                 </div> 
-                <button onClick={handleSpinPlaces} className="slot-btn">Spin</button>
+                <div className='btn-cntr'>
+                    <button onClick={handleSpinPlaces} className="slot-btn">Spin</button>
+                </div>
+                {/* <button onClick={saveToLocal} className="save-btn"> <IoLockClosed />Save</button> */}
             </div>
         </>
     )
 };
+
 

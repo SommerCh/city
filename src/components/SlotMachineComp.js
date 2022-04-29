@@ -2,14 +2,11 @@ import RandomActivity from "./RandomActivity";
 import RandomAttraction from "./RandomAttraction";
 import RandomEvent from "./RandomEvent";
 import RandomPlaceToEat from "./RandomPlaceToEat";
-import { GiKnifeFork, GiLighthouse } from "react-icons/gi";
-import { TiCameraOutline } from "react-icons/ti";
-import { IoCameraOutline, IoFastFoodOutline } from "react-icons/io5";
+import { IoRestaurantOutline, IoCameraOutline, IoGolfOutline, IoMusicalNotesOutline } from "react-icons/io5"; // Ionicons 5 Ikoner + etv alternativer til kategorier
 
 
 
 export default function SlotMachineComp() {
-
 
 
     return (
@@ -20,7 +17,7 @@ export default function SlotMachineComp() {
                 {/* Places To Eat */}
                 <div className="slot-wheel-box">
                     <div className="slot-wheel-title"> 
-                    <IoFastFoodOutline /><h3>Places to eat</h3>
+                     <IoRestaurantOutline />{/* <IoFastFoodOutline/>*/} <h3>Places to eat</h3> 
                     </div>
                     <RandomPlaceToEat />
                 </div>
@@ -36,7 +33,7 @@ export default function SlotMachineComp() {
 
                 <div className="slot-wheel-box">
                     <div className="slot-wheel-title"> 
-                    <IoFastFoodOutline /><h3>Activities</h3>
+                    <IoGolfOutline /><h3>Activities</h3>
                     </div>                    
                     <RandomActivity />
                 </div>
@@ -45,13 +42,13 @@ export default function SlotMachineComp() {
                 {/* Events */}
                 <div className="slot-wheel-box">
                 <div className="slot-wheel-title"> 
-                    <GiKnifeFork /><h3>Events</h3>
+                    <IoMusicalNotesOutline /> <h3>Events</h3>
                     </div>
                     <RandomEvent />
                 </div>
 
-
             </div>
+
         </>
     )
 }

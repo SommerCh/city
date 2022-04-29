@@ -1,4 +1,5 @@
-import { RiArrowRightSLine } from 'react-icons/ri';
+import { useState } from "react";
+import { IoChevronForward } from 'react-icons/io5';
 
 
 export default function SlotPrints() {
@@ -7,14 +8,43 @@ export default function SlotPrints() {
         // Save and print results
 
 
+        // const [thisPlace, setThisPlace] = useState([]);
+        // function handleclick() {
+        //     var x = localStorage.getItem("onePlace", JSON.parse);
 
+        //     document.getElementById("place").innerHTML = x;
+        //     setThisPlace(x);
+        // }      
+        
+
+        
     return (
         <>
             <div className="slot-prints">
 
+                {/* <div className="slot-print-box" id="place">
+                    <div className="print-img">
+                            <div className='print-title-box'>
+                            <div className='print-title'>                                
+                                <span><h2>{thisPlace.Name}</h2> {thisPlace.Category}</span>  
+
+                                <div className="readmore-btn">
+                                    <a href="/" target="_blank" rel="noreferrer">Read more <IoChevronForward/> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="print-details">
+                    <span>Fredensgade 38, Aarhus C 8000</span>
+                        <span>A world of fun </span>
+                        <p>{thisPlace.Name}  </p>
+                    </div>
+                </div>
+                <button onClick={handleclick}>get place!</button> */}
 
 
-            <div className="slot-print-box">
+
+             <div className="slot-print-box">
                     <div className="print-img">
                         <img src="https://files.guidedanmark.org/files/484/209363_Aarhus-Braetspilscafe-indendoers.jpg" alt="Aarhus Brætspilscafé" />
                             <div className='print-title-box'>
@@ -22,14 +52,14 @@ export default function SlotPrints() {
                                 <span><h2>Aarhus Brætspilscafé</h2> Place To Eat</span>  
 
                                 <div className="readmore-btn">
-                                    <a href="https://aarhusbraetspilscafe.dk/en" target="_blank" rel="noreferrer">Read more <RiArrowRightSLine/> </a>
+                                    <a href="https://aarhusbraetspilscafe.dk/en" target="_blank" rel="noreferrer">Read more <IoChevronForward/> </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="print-details">
-                        {/* PlacesToEat.js -> l. 781 */}
-                        <span>Fredensgade 38, Aarhus C 8000</span>
+                      {/*   PlacesToEat.js - l. 781 */}
+                    <span>Fredensgade 38, Aarhus C 8000</span>
                         <span>A world of fun </span>
                         <p>    A modest admission fee gives you access to a wealth of games, 
                             and a world of fun, where everyone can join in. <br/><br/>
@@ -41,8 +71,7 @@ export default function SlotPrints() {
                             and that you may not bring your own drinks or snacks
                         </p>
                     </div>
-                </div>
-
+                </div>  
 
 
                 <div className="slot-print-box">
@@ -52,7 +81,7 @@ export default function SlotPrints() {
                             <div className='print-title'>                                
                                 <span><h2>The Deer Park</h2> Attraction</span>  
                                 <div className="readmore-btn">
-                                    <a href="https://udflugtssteder.aarhus.dk/marselisborg-dyrehave/" target="_blank" rel="noreferrer">Read more <RiArrowRightSLine/> </a>
+                                    <a href="https://udflugtssteder.aarhus.dk/marselisborg-dyrehave/" target="_blank" rel="noreferrer">Read more <IoChevronForward/> </a>
                                 </div>                                
                             </div>
                         </div>
@@ -80,7 +109,7 @@ export default function SlotPrints() {
                             <div className='print-title'>                                
                                 <span><h2>RaceHall</h2> Activity</span>  
                                 <div className="readmore-btn">
-                                    <a href="https://www.visitaarhus.com/aarhus/plan-your-trip/release-your-inner-speed-devil-gdk982110" target="_blank" rel="noreferrer">Read more <RiArrowRightSLine/> </a>
+                                    <a href="https://www.visitaarhus.com/aarhus/plan-your-trip/release-your-inner-speed-devil-gdk982110" target="_blank" rel="noreferrer">Read more <IoChevronForward/> </a>
                                 </div>                                 
                             </div>
                         </div>
@@ -111,7 +140,7 @@ export default function SlotPrints() {
                                 <span><h2>Moesgaard Viking Moot</h2> Event</span>
 
                                 <div className="readmore-btn">
-                                    <a href="https://www.vikingetraeffet.dk/english/explore-the-viking-moot/" target="_blank" rel="noreferrer">Read more <RiArrowRightSLine/> </a>
+                                    <a href="https://www.vikingetraeffet.dk/english/explore-the-viking-moot/" target="_blank" rel="noreferrer">Read more <IoChevronForward/> </a>
                                 </div>
                                 
                             </div>
