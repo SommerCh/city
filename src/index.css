@@ -179,6 +179,12 @@ a {
     gap: 1em;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
 @media (min-width: 600px) {
     .grid-container {
         grid-template-columns: 1fr 1fr;
