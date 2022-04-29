@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import AllPlaces from "./AllPlaces";
 import imagePlaceholder from "../assets/imagePlaceholder.png";
 import Cafes from "./Cafes";
 import Clubs from "./Clubs";
 import Restaurants from "./Restaurants";
-import Search from "./Search";
 
 export default function PlacesToEat() {
   const [change, setChange] = useState();
