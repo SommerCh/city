@@ -1,50 +1,47 @@
 /* ---------- ROOTS ---------- */
 :root {
     /* ----- Primary Colors ----- */
-    --corp-red: #E70013;
-    --corp-blue: #022B52;
+    --corp-red: #e70013;
+    --corp-blue: #022b52;
     --black: #000000;
-    --light-grey: #CED2D3;
-    --dark-grey: #A1A8AD;
+    --light-grey: #ced2d3;
+    --dark-grey: #a1a8ad;
     --white: #ffff;
 
     /* ----- Secondary Colors ----- */
-    --dark-blue: #00587A;
-    --light-blue: #C3EBFF;
+    --dark-blue: #00587a;
+    --light-blue: #c3ebff;
     --dark-green: #007554;
-    --light-green: #A3EABF;
-    --dark-yellow: #DBA200;
-    --light-yellow: #FFE882;
-    --burgundy: #9A0035;
-    --pink: #FAC5CC;
+    --light-green: #a3eabf;
+    --dark-yellow: #dba200;
+    --light-yellow: #ffe882;
+    --burgundy: #9a0035;
+    --pink: #fac5cc;
 
     /* ------ Text & Font ----- */
     --text-color-light: #ffffff;
-    --text-color-dark: #022B52;
-    --font-family: 'VistDenmark', 'Montserrat', Verdana, Arial, sans-serif;
+    --text-color-dark: #022b52;
+    --font-family: "VistDenmark", "Montserrat", Verdana, Arial, sans-serif;
 
     /* ----- Img Filters ----- */
     --filter-brightness: brightness(75%);
     --filter-contrast: contrast(85%);
-    --filter-blur: blur(.5px);
-
+    --filter-blur: blur(0.5px);
 }
 
 /* ---------- FONTS ---------- */
 @font-face {
-    font-family: 'VisitDenmark';
+    font-family: "VisitDenmark";
     font-weight: 400;
     src: url("assets/fonts/VisitDenmark-Regular.otf") local("VisitDenmark-Regular") format("opentype"),
-         url("assets/fonts/VisitDenmark-Medium.otf") local("VisitDenmark-Medium") format("opentype"),
-         url("assets/fonts/VisitDenmark-SemiBold.otf") local("VisitDenmark-SemiBold") format("opentype"),
-         url("assets/fonts/VisitDenmark-Bold.otf") local("VisitDenmark-Bold") format("opentype")
-         url("assets/fonts/VisitDenmark-ExtraBold.otf") local("VisitDenmark-ExtraBold") format("opentype"),
-         url("assets/fonts/VisitDenmark-Outline-Regular.otf") local("VisitDenmark-Outline-Regular") format("opentype"),
-         url("assets/fonts/VisitDenmark-Outline-Medium.otf") local("VisitDenmark-Outline-Medium") format("opentype");;
+        url("assets/fonts/VisitDenmark-Medium.otf") local("VisitDenmark-Medium") format("opentype"),
+        url("assets/fonts/VisitDenmark-SemiBold.otf") local("VisitDenmark-SemiBold") format("opentype"),
+        url("assets/fonts/VisitDenmark-Bold.otf") local("VisitDenmark-Bold") format("opentype") url("assets/fonts/VisitDenmark-ExtraBold.otf") local("VisitDenmark-ExtraBold") format("opentype"),
+        url("assets/fonts/VisitDenmark-Outline-Regular.otf") local("VisitDenmark-Outline-Regular") format("opentype"),
+        url("assets/fonts/VisitDenmark-Outline-Medium.otf") local("VisitDenmark-Outline-Medium") format("opentype");
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 /* ---------- GEERAL ---------- */
 body {
@@ -54,7 +51,7 @@ body {
     margin: 0;
     background-color: var(--white);
     color: var(--corp-blue);
-    font-family: 'VistDenmark', 'Montserrat', Verdana, Arial, sans-serif;
+    font-family: "VistDenmark", "Montserrat", Verdana, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -122,7 +119,6 @@ a {
     filter: var(--filter-blur);
 }
 
-
 /* ---------- ANIMATIONS ---------- */
 /* fade in */
 @keyframes fadeIn {
@@ -145,7 +141,6 @@ a {
     }
 }
 
-
 /* ---------- NAV ---------- */
 .navbar {
     background-color: var(--corp-blue);
@@ -155,7 +150,6 @@ a {
     right: 0;
     text-align: center;
     z-index: 110;
-
 }
 
 .navbar a {
@@ -177,7 +171,6 @@ a {
     background-color: var(--light-blue);
     color: var(--corp-blue);
 }
-
 
 /* ---------- GRID ---------- */
 .grid-container {
@@ -209,13 +202,11 @@ a {
     cursor: pointer;
 }
 
-
 .grid-container>article img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-
 
 /* ---------- FORM ---------- */
 form {
@@ -284,13 +275,11 @@ input {
     margin: auto;
     display: block;
     cursor: pointer;
-
 }
 
 form .file-input {
     display: none;
 }
-
 
 /* ---------- CATEGORIES ---------- */
 .category-cntr {
@@ -326,6 +315,10 @@ form .file-input {
     object-fit: cover;
 }
 
+.category-article button {
+    margin: 0 auto 1em auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 
 /* ----- Category elements ----- */
 .category-flex-cntr {
@@ -402,7 +395,7 @@ form .file-input {
     padding: 5px 0px;
     position: absolute;
     z-index: 100;
-    background: radial-gradient(ellipse, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0) 60%);
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 60%);
 }
 
 .category-title h2 {
@@ -438,7 +431,6 @@ form .file-input {
     background-color: red;
     font-size: 10px;
     font-weight: 600;
-
 }
 
 .readmore-btn a {
@@ -456,7 +448,6 @@ form .file-input {
     height: 14px;
     bottom: 0;
 }
-
 
 /* ---------- SLOT MACHINE ---------- */
 .slot-section {
@@ -562,7 +553,7 @@ form .file-input {
     color: var(--white);
     position: absolute;
     text-align: left;
-    background: radial-gradient(ellipse, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0) 60%);
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 60%);
     text-shadow: 0 0 8px rgba(0, 0, 0, 1);
 }
 
@@ -609,7 +600,7 @@ form .file-input {
     max-height: 1.8em;
     line-height: 1em;
     font-weight: 500;
-    font-size: 2.2vw;    
+    font-size: 2.2vw;
     text-overflow: ellipsis;
     word-wrap: wrap;
     text-align: left;
@@ -696,9 +687,10 @@ form .file-input {
     text-align: left;
     line-height: 1;
 }
+
 .print-details span {
     padding: 5px 0px 0px 0px;
-    font-weight: 600;    
+    font-weight: 600;
     font-size: 12px;
 }
 
@@ -708,12 +700,12 @@ form .file-input {
     font-size: 10px;
 }
 
-div.print-img > div > div > div {
+div.print-img>div>div>div {
     background-color: var(--light-green);
     bottom: 0;
 }
 
-div.print-img > div > div > div > a{
+div.print-img>div>div>div>a {
     color: var(--corp-blue);
 }
 
@@ -753,7 +745,7 @@ div.print-img > div > div > div > a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: radial-gradient(ellipse, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0) 60%);
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 60%);
     text-align: left;
 }
 
@@ -769,6 +761,7 @@ div.print-img > div > div > div > a{
     font-weight: 600;
     font-size: 18px;
 }
+
 .print-title span {
     margin: 0;
     padding: 0;
@@ -781,6 +774,10 @@ div.print-img > div > div > div > a{
     font-weight: 600;
 }
 
-.no{display: none;}
+.no {
+    display: none;
+}
 
-.yes{display: inline;}
+.yes {
+    display: inline;
+}
