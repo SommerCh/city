@@ -10598,7 +10598,7 @@
                 "Id": 216621,
                 "Name": "ajstrup-strand-camping-minigolf",
                 "FileType": "image/jpeg",
-                "Uri": "https://files.guidedanmark.org/files/474/216621_ajstrup-strand-camping-minigolf.jpg",
+                "Uri": "https://gdkfiles.visitdenmark.com/files/472/216621_ajstrup-strand-camping-minigolf.jpg?width=987",
                 "Copyright": null,
                 "Photographer": "VisitOdder",
                 "AltText": null,
@@ -10802,7 +10802,19 @@
                 "Html": "<p>Theater Refleksion&nbsp;is a curios and ambitious puppet and animation theater, which creates intimate and relevant stories for both children and adults. You will be faced with essential and grounded themes from everyday life, while there is still room for surprises.</p>"
             }
         ],
-        "Files": [],
+        "Files": [
+            {
+                "Id": 134818,
+                "Name": "name",
+                "FileType": "image/jpeg",
+                "Uri": "https://refleksion.dk/wp-content/uploads/2021/10/belonging-1-scaled.jpg",
+                "Copyright": "copyright",
+                "Photographer": "photographer",
+                "AltText": null,
+                "Description": null,
+                "MetaTag": null
+            }
+        ],
         "SocialMediaLinks": [
             { "Url": "https://www.instagram.com/teaterrefleksion/?hl=da", "Name": "Instagram" },
             { "Url": "https://www.facebook.com/teatretrefleksion/?fref=ts", "Name": "Facebook " }
@@ -14249,7 +14261,19 @@
                 "Html": "<p><strong>At VoxHall</strong> you can enjoy rock concerts and music venues with lots of action on the dance floor; jazz sessions at the cosy and friendly pubs.</p>"
             }
         ],
-        "Files": [],
+        "Files": [
+            {
+                "Id": 67653,
+                "Name": "",
+                "FileType": "image/jpg",
+                "Uri": "https://fondenvoxhall.dk/wp-content/uploads/2017/11/voxhall.jpg",
+                "Copyright": "",
+                "Photographer": "",
+                "AltText": null,
+                "Description": null,
+                "MetaTag": null
+            }
+        ],
         "SocialMediaLinks": [],
         "BookingLinks": [],
         "ExternalLinks": [],

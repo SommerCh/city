@@ -84,30 +84,6 @@ export default function CategoryElements() {
     
     return (
         <>                
-                <h1>Attractions</h1>
-                <section className="category-flex-cntr" id='attractions'>          
-                    {attractions.map(element => ( 
-                        <div className="category-elem-box">
-                            <div className="category-img">
-                                <img src={getImgUrl(element)} alt={element.Name} />
-                                <div className='category-title-box'>
-                                    <div className='category-title'>
-                                        <h2>{element.Name}</h2>  
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="category-details">
-                                <p>{element.MainCategory.Name}</p>  
-                                <p>{element.Category.Name}</p>
-                                <div className='readmore-btn attractions-btn'>
-                                    <a href={element.CanonicalUrl} target="_blank" rel="noreferrer">Read more  <IoChevronForward /> </a>
-                                </div>
-                            </div>
-                        </div>
-                    ))} 
-                </section>
-
-
                 <h1>Activities</h1>
                 <section className="category-flex-cntr">          
                     {activities.map(element => ( 
@@ -129,6 +105,30 @@ export default function CategoryElements() {
                             </div>
                         </div>
                     ))}
+                </section>
+                
+                
+                <h1>Attractions</h1>
+                <section className="category-flex-cntr" id='attractions'>          
+                    {attractions.map(element => ( 
+                        <div className="category-elem-box">
+                            <div className="category-img">
+                                <img src={getImgUrl(element)} alt={element.Name} />
+                                <div className='category-title-box'>
+                                    <div className='category-title'>
+                                        <h2>{element.Name}</h2>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="category-details">
+                                <p>{element.MainCategory.Name}</p>  
+                                <p>{element.Category.Name}</p>
+                                <div className='readmore-btn attractions-btn'>
+                                    <a href={element.CanonicalUrl} target="_blank" rel="noreferrer">Read more  <IoChevronForward /> </a>
+                                </div>
+                            </div>
+                        </div>
+                    ))} 
                 </section>
 
 
