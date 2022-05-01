@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
+import { IoHeartSharp } from "react-icons/io5";
 
 
 export default function RandomEvent() {
@@ -33,6 +34,14 @@ export default function RandomEvent() {
             }
         }
 
+    // Save to local storage
+        // function saveToLocal() {
+        // window.localStorage.setItem("oneEvent", JSON.stringify(oneEvent));
+
+        // let thisEvent = window.localStorage.getItem("oneEvent");
+        // console.log(JSON.parse(thisEvent));
+        // }
+
     
 
     return (
@@ -43,12 +52,18 @@ export default function RandomEvent() {
                     <img src={oneEvent.Files?.lenght ? oneEvent?.Files[0]?.Uri : getImgEvt(oneEvent)} alt={oneEvent.Name} /> 
                     </div>           
                     <div className="slot-details">
+                    <div className='slot-details-txt'>
                         <div className="slot-title"> <h2>{oneEvent?.Name}</h2> </div>                                        
                         <div className="slot-cat"> <p>{oneEvent.Category?.Name}</p> </div>
+                        </div>
+                        <button className="save-btn"> <IoHeartSharp /> </button>    
                         {/* <div className="slot-desc"> <p>{oneEvent.Descriptions[0].Text}</p> </div>  */}
                     </div>
                 </div> 
-                <button onClick={handleSpinEvents} className="slot-btn">Spin</button>                
+                <div className='btn-cntr'>
+                    <button onClick={handleSpinEvents} className="slot-btn">Spin</button>
+                </div>
+                {/* <button onClick={saveToLocal} className="save-btn"> <IoLockClosed />Save </button>               */}
             </div>
         </>
     )

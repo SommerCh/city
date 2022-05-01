@@ -25,13 +25,18 @@ export default function CategoriesPage() {
   return (
     <>
       <div className="page">
+        {/* <h1>Categories</h1> */}
+        <h1>Search attractions, restaurantes and experiences</h1>
+        <h3>We have listed attractions, cafées and more right here. So you can search everything you need to plan your holiday.</h3>
         <input type="search" placeholder="Search" onkeyup="search(this.value)" />
-        <h1>Categories</h1>
         <section className="category-cntr">
           {categories.map((category) => (
             <article className="category-article">
-              <img src={category.ImageUrl} alt={category.Name} />
+              <div className="article-img">
+                <img src={category.ImageUrl} alt={category.Name} />
+              </div>
               <h2>{category.Name}</h2>
+              {/* <p>{category.Details}</p> */}
               <button onClick={handleClick}> See All {category.Name}</button>
             </article>
           ))}

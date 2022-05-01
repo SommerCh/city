@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
+import { IoHeartSharp } from "react-icons/io5";
 
 
 export default function RandomAttraction() {
@@ -33,6 +34,13 @@ export default function RandomAttraction() {
             }         
         }
 
+    // Save to local storage
+        // function saveToLocal() {
+        //     window.localStorage.setItem("oneAttraction", JSON.stringify(oneAttraction));
+
+        //     let thisAttraction = window.localStorage.getItem("oneAttraction");
+        //     console.log(JSON.parse(thisAttraction));
+        // }
 
         
     return (
@@ -43,13 +51,18 @@ export default function RandomAttraction() {
                     <img src={oneAttraction.Files?.lenght ? oneAttraction?.Files[0]?.Uri : getImgAtt(oneAttraction)} alt={oneAttraction.Name} /> 
                     </div>           
                     <div className="slot-details">
+                    <div className='slot-details-txt'>
                         <div className="slot-title"> <h2>{oneAttraction?.Name}</h2> </div>                                        
                         <div className="slot-cat"> <p>{oneAttraction.Category?.Name}</p> </div>
+                        </div>
+                        <button className="save-btn"> <IoHeartSharp /> </button>    
                         {/* <div className="slot-desc"> <p>{oneAttraction.Descriptions[0].Text}</p> </div>      */}
                     </div>
                 </div> 
-                <button onClick={handleSpinAttractions} className="slot-btn">Spin</button>
-                            
+                <div className='btn-cntr'>
+                    <button onClick={handleSpinAttractions} className="slot-btn">Spin</button>
+                </div>
+                {/* <button onClick={saveToLocal} className="save-btn"> <IoLockClosed />Save </button>       */}
             </div>
         </>
     )

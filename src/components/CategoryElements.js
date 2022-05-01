@@ -1,5 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from "react";
+import imagePlaceholder from "../assets/imagePlaceholder.png";
+import { IoChevronForward } from 'react-icons/io5';
+
 
 
 export default function CategoryElements() {
@@ -81,6 +84,30 @@ export default function CategoryElements() {
     
     return (
         <>                
+                <h1>Activities</h1>
+                <section className="category-flex-cntr">          
+                    {activities.map(element => ( 
+                        <div className="category-elem-box">  
+                            <div className="category-img">
+                                <img src={getImgUrl(element)} alt={element.Name} />
+                                <div className='category-title-box'>
+                                    <div className='category-title'>
+                                        <h2>{element.Name}</h2>  
+                                    </div>
+                                </div>
+                            </div>           
+                            <div className="category-details">
+                                <p>{element.MainCategory.Name}</p>  
+                                <p>{element.Category.Name}</p>
+                                <div className='readmore-btn activity-btn'>
+                                    <a href={element.CanonicalUrl} target="_blank" rel="noreferrer">Read more  <IoChevronForward /> </a>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </section>
+                
+                
                 <h1>Attractions</h1>
                 <section className="category-flex-cntr" id='attractions'>          
                     {attractions.map(element => ( 
@@ -93,36 +120,15 @@ export default function CategoryElements() {
                                     </div>
                                 </div>
                             </div>
-                            
                             <div className="category-details">
-                                {/* <h2>{element.Name}</h2>                      */}
                                 <p>{element.MainCategory.Name}</p>  
                                 <p>{element.Category.Name}</p>
-                                {/* <p>{element.Descriptions[0].Text}</p>  */}
-                                <div className='readmore-btn'>
-                                    <a href={element.CanonicalUrl} target="_blank" rel="noreferrer">Read more </a>
+                                <div className='readmore-btn attractions-btn'>
+                                    <a href={element.CanonicalUrl} target="_blank" rel="noreferrer">Read more  <IoChevronForward /> </a>
                                 </div>
                             </div>
                         </div>
                     ))} 
-                </section>
-
-
-                <h1>Activities</h1>
-                <section className="category-flex-cntr">          
-                    {activities.map(element => ( 
-                        <div className="category-elem-box">  
-                            <div className="category-img">
-                                <img src={getImgUrl(element)} alt={element.Name} />
-                            </div>           
-                            <div className="category-details">
-                                <h2>{element.Name}</h2>                 
-                                <p>{element.MainCategory.Name}</p>  
-                                <p>{element.Category.Name}</p>
-                                {/* <p className='category-desc'>{element.Descriptions[0].Text}</p>  */}
-                            </div>
-                        </div>
-                    ))}
                 </section>
 
 
@@ -132,12 +138,18 @@ export default function CategoryElements() {
                         <div className="category-elem-box">                      
                             <div className="category-img">
                             <img src={getImgUrl(element)} alt={element.Name} />
+                            <div className='category-title-box'>
+                                    <div className='category-title'>
+                                        <h2>{element.Name}</h2>  
+                                    </div>
+                                </div>
                             </div>
                             <div className="category-details">
-                                <h2>{element.Name}</h2> 
                                 <p>{element.MainCategory.Name}</p>  
                                 <p>{element.Category.Name}</p>
-                                {/* <p>{element.Descriptions[0].Text}</p>  */}
+                                <div className='readmore-btn event-btn'>
+                                    <a href={element.CanonicalUrl} target="_blank" rel="noreferrer">Read more  <IoChevronForward /> </a>
+                                </div>
                             </div>   
                         </div>
                     ))}
@@ -149,13 +161,19 @@ export default function CategoryElements() {
                     {places.map(element => ( 
                         <div className="category-elem-box">
                             <div className="category-img">
-                                <img src={getImgUrl} alt={element.Name} />
+                                <img src={element.Files[0] ? element.Files[0].Uri : imagePlaceholder} alt={element.Name} />
+                                <div className='category-title-box'>
+                                    <div className='category-title'>
+                                        <h2>{element.Name}</h2>  
+                                    </div>
+                                </div>
                             </div>
                             <div className="category-details">
-                                <h2>{element.Name}</h2> 
                                 <p>{element.MainCategory.Name}</p>  
                                 <p>{element.Category.Name}</p>
-                                {/* <p>{element.Descriptions[0].Text}</p>  */}
+                                <div className='readmore-btn place-btn'>
+                                    <a href={element.CanonicalUrl} target="_blank" rel="noreferrer">Read more <IoChevronForward /> </a>
+                                </div>
                             </div>
                         </div>
                     ))}

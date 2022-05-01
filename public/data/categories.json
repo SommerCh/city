@@ -2,6 +2,7 @@
     {
         "Id": 3,
         "Name": "Attractions",
+        "Details": "Architecture, Urban Spaces, Amusement Parks, Natural Areas, Churches and more.",
         "ImageUrl": "https://files.guidedanmark.org/files/466/221961_VDKType-Attraktioner.jpg",
         "Children": [
             {
@@ -87,6 +88,7 @@
     {
         "Id": 36,
         "Name": "Activities",
+        "Details": "Sport and Activities, Theatres/Cinemas, Shopping, Sightseeing and more.",
         "ImageUrl": "https://files.guidedanmark.org/files/466/221953_VDKType-Aktiviteter.jpg",
         "Children": [
             {
@@ -220,6 +222,7 @@
     {
         "Id": 58,
         "Name": "Events",
+        "Details": "Events, Concerts, Festivals, Markets and more",
         "ImageUrl": "https://files.guidedanmark.org/files/466/221960_VDKType-Begivenheder.jpg",
         "Children": [
             {
@@ -233,6 +236,7 @@
     {
         "Id": 62,
         "Name": "Places to eat",
+        "Details": "Restaurants, Cafés, Local Specialties, Nightlife and Clubs.",
         "ImageUrl": "https://files.guidedanmark.org/files/466/221970_VDKType-Spisesteder.jpg",
         "Children": [
             {
