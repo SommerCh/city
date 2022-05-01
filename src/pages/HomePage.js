@@ -6,7 +6,7 @@ export default function HomePage() {
     return (
         <>
             <div className="page">
-                <div className="onboarding-msg">
+                <div className="msg">
                     <h2>City Break Planner</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna metus, 
                         elementum vitae suscipit nec, gravida ut leo. Vestibulum finibus vitae massa 

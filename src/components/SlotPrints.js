@@ -59,8 +59,8 @@ export default function SlotPrints() {
                     </div>
                     <div className="print-details">
                       {/*   PlacesToEat.js - l. 781 */}
-                    <span>Fredensgade 38, Aarhus C 8000</span>
-                        <span>A world of fun </span>
+                        <span>A world of fun</span>
+                        <p>Fredensgade 38, Aarhus C 8000 </p>
                         <p>    A modest admission fee gives you access to a wealth of games, 
                             and a world of fun, where everyone can join in. <br/><br/>
                             If you feel like a bite to eat or something to drink while playing, small delicious dishes, coffee and cakes 
@@ -88,7 +88,8 @@ export default function SlotPrints() {
                     </div>
                     <div className="print-details">
                         {/* Attractions.json -> l. 16109 */}
-                        <span>Ørneredevej 6, Højbjerg 8270</span>
+                        <span>Experience the wonderful population of sika and fallow deer</span>
+                        <p>Ørneredevej 6, Højbjerg 8270</p>
                         <p>In the Deer Park there are plenty benches and table-and-bench sets, 
                             so feel free to bring along a picnic basket for a pleasant lunch or a snack in the wonderful surroundings.<br/> <br/>
                             In the park you may go tobogganing or skiing in winter, you can feed the animals fresh apples and carrots, feed the ducks, 
@@ -100,6 +101,28 @@ export default function SlotPrints() {
                     </div>
                 </div>
 
+
+                <div className="slot-print-box">
+                    <div className="print-img">
+                    <img src="https://files.guidedanmark.org/files/484/259174_fed-fredag-tivoli-friheden-aarhus.jpg" alt="fed fredag" />                            <div className='print-title-box'>
+                            <div className='print-title'>                                 
+                            <span><h2>Fed Fredag Concerts in Tivoli Friheden</h2> Event</span>
+
+                                <div className="readmore-btn">
+                                    <a href="http://www.visitaarhus.com/ln-int/denmark/see-more-pay-less/enjoy-aarhus-with-an-aarhuscard" target="_blank" rel="noreferrer">Read more <IoChevronForward/> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="print-details">
+                    <span>Outdoor concert in Tivoli Friheden</span>
+                        <p>Skovbrynet 5, Aarhus C 8000</p>
+                        <p>Each year the biggest amusement park in Aarhus Tivoli Friheden hosts a string of concerts called Fed Fredag. <br /><br />
+                            The concerts are primarily with Danish artists and start around 8 pm. <br/><br />
+                            The atmosphere is fantastic!.
+                        </p>
+                    </div>
+                </div>
 
 
                 <div className="slot-print-box">
@@ -118,8 +141,8 @@ export default function SlotPrints() {
                         {/* <div className="print-date"><h3>Mandag</h3><p>02.05.22</p></div> */}
 
                         {/* Activities.json -> l.2071 */}
-                        <span>Hasselager Centervej 30, Viby J 8260</span>
                         <span>Release your inner speed devil </span>
+                        <p>Hasselager Centervej 30, Viby J 8260</p>
                         <p>RaceHall is the place for you, <br/>
                             if you love the smell of petrol – and have some of it running in your veins. <br/> 
                             Racehall is Europe's largest go-cart centre where you can compete against your pals to see who gets the right to gloat! <br/>
@@ -130,40 +153,6 @@ export default function SlotPrints() {
                     </div>
                 </div>
 
-
-
-                <div className="slot-print-box">
-                    <div className="print-img">
-                        <img src="https://files.guidedanmark.org/files/484/196119_Moesgaard-Museum-Aarhus-Moesgaard-Vikingetraef.jpg" alt="Vikingetræf" />
-                            <div className='print-title-box'>
-                            <div className='print-title'>                                 
-                                <span><h2>Moesgaard Viking Moot</h2> Event</span>
-
-                                <div className="readmore-btn">
-                                    <a href="https://www.vikingetraeffet.dk/english/explore-the-viking-moot/" target="_blank" rel="noreferrer">Read more <IoChevronForward/> </a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div className="print-details">
-                        {/* Events.js -> l. 485 */}
-                        <span>Moesgård Allé 15, Højbjerg 8270</span>
-                        <p>The market stalls offer a wealth of interesting articles, and craftsmen produce fine items of iron, 
-                            wood, leather, silver, wool, amber, glass, willow, and many other materials.<br/><br/>
-                            The Viking Moot at Moesgård Beach is an annual event, <br/>
-                            which takes place on the last weekend in July - the weekend closest to July 28, the feast day of St. Olaf. 
-                            In the Middle Ages and probably in the Viking Age too, this day was a fair day in Aarhus. <br/><br/>
-                            Activities for every taste <br/>
-                            Visitors can try their skills at different activities. 
-                            Archery is especially popular, and here children and adults compete for the best result. 
-                            However, there are activities for every taste, and all age groups can take part. <br/><br/>
-                            Entry<br/>
-                            Adults: DKK 140,-<br/>
-                            Free admission for children under the age of 18.
-                        </p>
-                    </div>
-                </div>
                 
 
             </div>

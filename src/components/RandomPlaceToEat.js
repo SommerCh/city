@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-// import { IoLockClosed } from "react-icons/io5";
+import { IoHeartSharp } from "react-icons/io5";
 
 
 export default function RandomPlaceToEat() {
@@ -51,8 +51,11 @@ export default function RandomPlaceToEat() {
                         <img src={onePlace.Files?.lenght ? onePlace?.Files[0]?.Uri : getImgPla(onePlace)} alt={onePlace.Name} /> 
                     </div>           
                     <div className="slot-details">
+                    <div className='slot-details-txt'>
                         <div className="slot-title"> <h2>{onePlace?.Name}</h2> </div>                                        
                         <div className="slot-cat"> <p>{onePlace.Category?.Name}</p> </div>
+                        </div>
+                        <button className="save-btn"> <IoHeartSharp /> </button>    
                         {/* <div className="slot-desc"> <p>{onePlace.Descriptions[0]?.Text}</p> </div>            */}
                     </div>
                 </div> 

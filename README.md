@@ -12,7 +12,7 @@ With our slot machine, you get random places to eat, activities to do, attractio
 
 __Demo__: [City Break Planner](https:// )
 
-__XD Prototype__: [Prototype](https:// )
+__XD Prototype__: [Prototype](https://xd.adobe.com/view/fea4d50a-8a5a-48f5-9790-1aa2361aaa95-abf7/)
 
 __Miro Boards__: [Product Roadmap](https://miro.com/app/board/uXjVO74JXSQ=/), [Agile Retrospective](https:/ ), [Budget Estimation Sheet](https:// )
 

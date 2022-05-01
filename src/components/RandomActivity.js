@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-// import { IoLockClosed } from "react-icons/io5";
+import { IoHeartSharp } from "react-icons/io5";
 
 
 export default function RandomActivity() {
@@ -51,15 +51,17 @@ export default function RandomActivity() {
                     <img src={oneActivity.Files?.lenght ? oneActivity?.Files[0]?.Uri : getImgAct(oneActivity)} alt={oneActivity.Name} /> 
                     </div>           
                     <div className="slot-details">
+                        <div className='slot-details-txt'>
                         <div className="slot-title"> <h2>{oneActivity?.Name}</h2> </div>                                        
                         <div className="slot-cat"> <p>{oneActivity.Category?.Name}</p> </div>
+                        </div>
+                        <button className="save-btn"> <IoHeartSharp /> </button>    
                         {/* <div className="slot-desc"> <p>{oneActivity.Descriptions[0].Text}</p> </div>         */}
                     </div>
                 </div> 
                 <div className='btn-cntr'>
                     <button onClick={handleSpinActivities} className="slot-btn">Spin</button>
                 </div>
-                {/* <button onClick={saveToLocal} className="save-btn"> <IoLockClosed />Save </button>               */}
             </div>
         </>
     )

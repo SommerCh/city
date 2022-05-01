@@ -2,11 +2,11 @@ import RandomActivity from "./RandomActivity";
 import RandomAttraction from "./RandomAttraction";
 import RandomEvent from "./RandomEvent";
 import RandomPlaceToEat from "./RandomPlaceToEat";
-import { IoRestaurantOutline, IoCameraOutline, IoGolfOutline, IoMusicalNotesOutline } from "react-icons/io5"; // Ionicons 5 Ikoner + etv alternativer til kategorier
-import placesImg from "../assets/placesImg.png";
-import eventsImg from "../assets/eventsImg.png";
-import attractionsImg from "../assets/attractionsImg.png";
-import activitiesImg from "../assets/activitiesImg.png";
+// import { IoRestaurantOutline, IoCameraOutline, IoGolfOutline, IoMusicalNotesOutline } from "react-icons/io5"; // Ionicons 5 Ikoner + etv alternativer til kategorier
+import placesImg from "../assets/placesImgB.png";
+import eventsImg from "../assets/eventsImgB.png";
+import attractionsImg from "../assets/attractionsImgB.png";
+import activitiesImg from "../assets/activitiesImgB.png";
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-// import { IoLockClosed } from "react-icons/io5";
+import { IoHeartSharp } from "react-icons/io5";
 
 
 export default function RandomAttraction() {
@@ -51,8 +51,11 @@ export default function RandomAttraction() {
                     <img src={oneAttraction.Files?.lenght ? oneAttraction?.Files[0]?.Uri : getImgAtt(oneAttraction)} alt={oneAttraction.Name} /> 
                     </div>           
                     <div className="slot-details">
+                    <div className='slot-details-txt'>
                         <div className="slot-title"> <h2>{oneAttraction?.Name}</h2> </div>                                        
                         <div className="slot-cat"> <p>{oneAttraction.Category?.Name}</p> </div>
+                        </div>
+                        <button className="save-btn"> <IoHeartSharp /> </button>    
                         {/* <div className="slot-desc"> <p>{oneAttraction.Descriptions[0].Text}</p> </div>      */}
                     </div>
                 </div> 
