@@ -336,7 +336,7 @@ form .file-input {
 .category-cntr {
     margin: 0px 5px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1em;
 }
 
