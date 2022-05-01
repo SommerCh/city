@@ -7,10 +7,9 @@ export default function HomePage() {
         <>
             <div className="page">
                 <div className="msg">
-                    <h2>City Break Planner</h2>
+                    <h1>City Break Planner</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna metus, 
-                        elementum vitae suscipit nec, gravida ut leo. Vestibulum finibus vitae massa 
-                        faucibus hendrerit.  
+                        elementum vitae suscipit nec, gravida ut leo. 
                     </p>
                 </div>
 

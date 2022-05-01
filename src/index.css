@@ -185,6 +185,7 @@ a {
     display: inline-block;
     color: var(--white);
     text-align: center;
+    font-weight: 600;
     padding: 20px 16px;
     text-decoration: none;
     letter-spacing: 0.1em;
