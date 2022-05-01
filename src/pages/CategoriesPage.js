@@ -30,7 +30,9 @@ export default function CategoriesPage() {
         <section className="category-cntr">
           {categories.map((category) => (
             <article className="category-article">
-              <img src={category.ImageUrl} alt={category.Name} />
+              <div className="article-img">
+                <img src={category.ImageUrl} alt={category.Name} />
+              </div>
               <h2>{category.Name}</h2>
               <button onClick={handleClick}> See All {category.Name}</button>
             </article>

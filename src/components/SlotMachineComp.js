@@ -3,6 +3,10 @@ import RandomAttraction from "./RandomAttraction";
 import RandomEvent from "./RandomEvent";
 import RandomPlaceToEat from "./RandomPlaceToEat";
 import { IoRestaurantOutline, IoCameraOutline, IoGolfOutline, IoMusicalNotesOutline } from "react-icons/io5"; // Ionicons 5 Ikoner + etv alternativer til kategorier
+import placesImg from "../assets/placesImg.png";
+import eventsImg from "../assets/eventsImg.png";
+import attractionsImg from "../assets/attractionsImg.png";
+import activitiesImg from "../assets/activitiesImg.png";
 
 
 
@@ -17,7 +21,10 @@ export default function SlotMachineComp() {
                 {/* Places To Eat */}
                 <div className="slot-wheel-box">
                     <div className="slot-wheel-title"> 
-                     <IoRestaurantOutline />{/* <IoFastFoodOutline/>*/} <h3>Places to eat</h3> 
+                        <div className="slot-wheel-img">
+                            <img src={placesImg} alt="places to eat"/> 
+                        </div>
+                        <h3>Places to eat</h3> 
                     </div>
                     <RandomPlaceToEat />
                 </div>
@@ -25,7 +32,10 @@ export default function SlotMachineComp() {
 
                 <div className="slot-wheel-box">
                     <div className="slot-wheel-title"> 
-                    <IoCameraOutline /><h3>Attractions</h3>
+                    <div className="slot-wheel-img">
+                            <img src={attractionsImg} alt="places to eat"/> 
+                        </div>
+                    <h3>Attractions</h3>
                     </div>                    
                     <RandomAttraction />
                 </div>
@@ -33,7 +43,10 @@ export default function SlotMachineComp() {
 
                 <div className="slot-wheel-box">
                     <div className="slot-wheel-title"> 
-                    <IoGolfOutline /><h3>Activities</h3>
+                    <div className="slot-wheel-img">
+                            <img src={activitiesImg} alt="places to eat"/> 
+                        </div>
+                    <h3>Activities</h3>
                     </div>                    
                     <RandomActivity />
                 </div>
@@ -42,7 +55,10 @@ export default function SlotMachineComp() {
                 {/* Events */}
                 <div className="slot-wheel-box">
                 <div className="slot-wheel-title"> 
-                    <IoMusicalNotesOutline /> <h3>Events</h3>
+                    <div className="slot-wheel-img">
+                            <img src={eventsImg} alt="places to eat"/> 
+                        </div>
+                    <h3>Events</h3>
                     </div>
                     <RandomEvent />
                 </div>
