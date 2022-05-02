@@ -10,11 +10,11 @@ With our slot machine, you get random places to eat, activities to do, attractio
 
 🚀 
 
-__Demo__: [City Break Planner](https:// )
+__Demo__: [City Break Planner](https://SommerCh.github.io/city )
 
 __XD Prototype__: [Prototype](https://xd.adobe.com/view/fea4d50a-8a5a-48f5-9790-1aa2361aaa95-abf7/)
 
-__Miro Boards__: [Product Roadmap](https://miro.com/app/board/uXjVO74JXSQ=/), [Agile Retrospective](https:/ ), [Budget Estimation Sheet](https:// )
+__Miro Boards__: [Product Roadmap & Budget Estimation Sheet](https://miro.com/app/board/uXjVO74JXSQ=/?fbclid=IwAR3iVc57jAYSb3NAgqqsrRgfX-8y1EzbWyPAlI_9fitq4d35quPBd98c7fw), [Agile Retrospective](https://miro.com/app/board/uXjVO5Sq8dE=/?fbclid=IwAR3t662l4lguWGqZEmwDIfkPwJqIkvxSH6X-O2RyUoeV1o4PVlTi8aTNs04 )
 
 
 ***
