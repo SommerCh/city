@@ -56,6 +56,7 @@ export default function PlacesToEat() {
         type="text"
         onChange={(e) => setSearch(e.target.value.toLowerCase())}
         onkeyup="search(this.value)"
+        placeholder="Search"
       />
 
 <select value={change} onChange={test}>
