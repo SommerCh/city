@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/city/static/css/main.673c8612.css",
+    "main.js": "/city/static/js/main.f97c03aa.js",
+    "static/js/787.76a4af3b.chunk.js": "/city/static/js/787.76a4af3b.chunk.js",
+    "static/media/VisitDenmark-SemiBold.otf": "/city/static/media/VisitDenmark-SemiBold.afb900071dcef2ec872d.otf",
+    "static/media/VisitDenmark-Outline-Medium.otf": "/city/static/media/VisitDenmark-Outline-Medium.1294fafdecf84b7bffb6.otf",
+    "static/media/VisitDenmark-ExtraBold.otf": "/city/static/media/VisitDenmark-ExtraBold.264391f08fc48435b7ad.otf",
+    "static/media/VisitDenmark-Bold.otf": "/city/static/media/VisitDenmark-Bold.2b38862d9b66bd8e836a.otf",
+    "static/media/VisitDenmark-Medium.otf": "/city/static/media/VisitDenmark-Medium.ad6310d8f6f3655a683e.otf",
+    "static/media/VisitDenmark-Regular.otf": "/city/static/media/VisitDenmark-Regular.b2693e190b3c3b48df16.otf",
+    "static/media/VisitDenmark-Outline-Regular.otf": "/city/static/media/VisitDenmark-Outline-Regular.06fd9d2738bfcae8d05d.otf",
+    "static/media/VisitDenmark-INT-Hjerte.png": "/city/static/media/VisitDenmark-INT-Hjerte.cccd6c8b906f2efe20ee.png",
+    "static/media/imagePlaceholder.png": "/city/static/media/imagePlaceholder.5ab8590fd7595dff5920.png",
+    "index.html": "/city/index.html",
+    "main.673c8612.css.map": "/city/static/css/main.673c8612.css.map",
+    "main.f97c03aa.js.map": "/city/static/js/main.f97c03aa.js.map",
+    "787.76a4af3b.chunk.js.map": "/city/static/js/787.76a4af3b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.673c8612.css",
+    "static/js/main.f97c03aa.js"
+  ]
+}
