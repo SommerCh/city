@@ -248,6 +248,7 @@ a {
     margin: 5px 0px;
     padding: 1.5em;
     background-color: var(--white);
+    color: var(--corp-blue);
     transition: 0.5s;
     animation: fadeIn 0.5s;
     cursor: pointer;
@@ -315,6 +316,7 @@ input {
     box-sizing: border-box;
     display: block;
     background: var(--white);
+    color: var(--corp-blue);
     border: solid 2px var(--dark-yellow);
 }
 
